@@ -65,9 +65,5 @@ td:first-child{font-weight:600}
 .rec-tag{display:inline-block;font-size:10.5px;line-height:1.4;color:var(--gold2);background:#f5e9d3;border-radius:999px;padding:3px 9px;letter-spacing:.01em;word-break:keep-all}
 .rec-name{display:block;font-size:15px;font-weight:600;margin:8px 0 3px;word-break:keep-all}
 .rec-desc{display:block;font-size:11.5px;color:var(--mute);line-height:1.5;word-break:keep-all}
-.rec-price{display:block;margin-top:7px;line-height:1.2}
-.rec-price s{color:#a99e8b;font-size:11.5px;margin-right:5px}
-.rec-price b{font-size:16.5px;color:var(--gold2);font-weight:700}
-.rec-meta{display:block;font-size:11px;color:var(--mute);margin-top:3px;word-break:keep-all}
-.rec-btn{display:block;margin-top:11px;padding:11px;border-radius:10px;background:var(--ink);color:#fff;text-align:center;font-size:13.5px;letter-spacing:.04em}
+.rec-btn{display:block;margin-top:13px;padding:11px;border-radius:10px;background:var(--ink);color:#fff;text-align:center;font-size:13.5px;letter-spacing:.04em}
 .rec-note{font-size:10.5px;color:var(--mute);line-height:1.55;margin:2px 2px 0;word-break:keep-all}
