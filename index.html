@@ -26,7 +26,7 @@
 <meta name="twitter:description" content="가지고 있는 반지를 휴대폰 화면에 올려 10초 만에 내 반지 호수를 확인하세요.">
 <meta name="twitter:image" content="https://jihyeonchoi25.github.io/ring-sizer/og-image.png">
 
-<link rel="stylesheet" href="style.css?v=2">
+<link rel="stylesheet" href="style.css?v=3">
 </head>
 <body>
 <header class="top">
@@ -38,6 +38,13 @@
 <main id="calib" class="screen">
   <h1>먼저 화면 크기를 맞춰요</h1>
   <p class="lead">기기마다 화면 크기가 달라 한 번만 보정이 필요해요.<br>보정값은 이 휴대폰에 저장돼요.</p>
+  <div class="warn" role="note">
+    <span class="ic" aria-hidden="true">!</span>
+    <div>
+      <strong>보정이 어긋나면 결과도 달라져요</strong>
+      <p>화면 측정 결과는 기기 해상도·보정 오차에 따라 실제 호수와 차이가 날 수 있으며 <b>정확하지 않을 수 있습니다.</b> 카드·동전 테두리에 최대한 딱 맞춰 주시고, 정확한 호수 확인이나 반지 주문 전에는 실물 링게이지·봉게이지로 측정하시는 것을 권장합니다.</p>
+    </div>
+  </div>
   <div class="seg" role="tablist">
     <button class="on" data-mode="card">신용카드</button>
     <button data-mode="coin">100원 동전</button>
@@ -73,6 +80,13 @@
       <div class="ref">US <b id="rsUS">-</b> · EU <b id="rsEU">-</b></div>
     </div>
   </div>
+  <div class="warn" role="note">
+    <span class="ic" aria-hidden="true">!</span>
+    <div>
+      <strong>화면 측정은 정확하지 않을 수 있어요</strong>
+      <p>화면 측정 결과는 기기 해상도·보정 오차 및 반지 두께·안쪽 굴곡에 따라 실제 호수와 차이가 날 수 있으며 <b>정확하지 않을 수 있습니다.</b> 정확한 호수 확인이나 반지 주문 전에는 실물 링게이지·봉게이지로 측정하시는 것을 권장합니다.</p>
+    </div>
+  </div>
   <div class="ctl">
     <button class="pm" id="mMinus" aria-label="작게">−</button>
     <input type="range" id="mRange" min="12.5" max="23" step="0.01" value="16.5">
@@ -85,11 +99,37 @@
       <tbody></tbody>
     </table>
   </div>
+
+  <!-- 실물 게이지 추천 · 바로 주문 -->
+  <section class="recommend">
+    <h2>정확한 호수는 실물 게이지로</h2>
+    <p class="rec-lead">화면 측정은 참고용이에요. 반지 주문 전에는 샤밍주얼리 실물 게이지로 한 번 더 확인해 주세요.</p>
+    <div class="rec-list">
+      <a class="rec-card" href="https://smartstore.naver.com/charmingdia/products/4840608055" target="_blank" rel="noopener noreferrer">
+        <span class="rec-tag">손가락에 직접 끼워 측정</span>
+        <strong class="rec-name">KS 신형 링 게이지</strong>
+        <span class="rec-desc">태흥 정밀 오리지널 · 1~30호 · 리뷰 1,400건</span>
+        <span class="rec-price"><s>16,200원</s> <b>15,700원</b></span>
+        <span class="rec-meta">배송비 3,000원 · 오늘출발 14:00 마감</span>
+        <span class="rec-btn">바로 주문하기</span>
+      </a>
+      <a class="rec-card" href="https://smartstore.naver.com/charmingdia/products/12069988056" target="_blank" rel="noopener noreferrer">
+        <span class="rec-tag">가지고 있는 반지로 측정</span>
+        <strong class="rec-name">KS 플라스틱 봉게이지</strong>
+        <span class="rec-desc">태흥정밀 흠집방지 · 1~30호 · 반지에 끼워 확인</span>
+        <span class="rec-price"><b>18,000원</b></span>
+        <span class="rec-meta">무료배송 · 오늘출발 14:00 마감</span>
+        <span class="rec-btn">바로 주문하기</span>
+      </a>
+    </div>
+    <p class="rec-note">가격·배송 조건은 스마트스토어 기준(2026.11.19 확인)이며 쿠폰·옵션에 따라 달라질 수 있어요. 봉게이지는 플라스틱 기본, 알루미늄은 +5,000원이에요.</p>
+  </section>
+
   <p class="note"><b>안쪽 둘레</b>는 반지 안쪽에서 잰 원주(안지름 × π)이고, <b>손가락 둘레</b>는 샤밍주얼리 스토어 KS규격 표(1호 44mm ~ 30호 73mm) 기준이에요. 두 값은 약 2.7mm 차이가 나요.<br>한국 표준(KS) 호수 기준이며 안지름은 호수당 약 0.33mm씩 커져요. 브랜드·제품 형태에 따라 ±0.5호 차이가 있을 수 있으니, 두 호수 사이이면 큰 호수를 권해 드려요. 폭이 넓은 반지는 0.5~1호 크게 주문하시길 권해요. US·EU는 참고용이에요.</p>
   <button class="ghost" id="recal">화면 크기 다시 보정</button>
 </main>
 
 <footer class="foot">LE CHARMING · 샤밍주얼리</footer>
-<script src="app.js?v=2"></script>
+<script src="app.js?v=3"></script>
 </body>
 </html>
