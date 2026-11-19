@@ -1,0 +1,74 @@
+<!doctype html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover,user-scalable=no">
+<meta name="referrer" content="no-referrer">
+<title>반지 호수 측정 · LE CHARMING</title>
+<meta name="description" content="가지고 있는 반지를 휴대폰 화면에 올려 내 반지 호수를 확인하세요.">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<header class="top">
+  <div class="brand">LE CHARMING</div>
+  <div class="sub">반지 호수 측정</div>
+</header>
+
+<!-- 1단계: 화면 크기 보정 -->
+<main id="calib" class="screen">
+  <h1>먼저 화면 크기를 맞춰요</h1>
+  <p class="lead">기기마다 화면 크기가 달라 한 번만 보정이 필요해요.<br>보정값은 이 휴대폰에 저장돼요.</p>
+  <div class="seg" role="tablist">
+    <button class="on" data-mode="card">신용카드</button>
+    <button data-mode="coin">100원 동전</button>
+  </div>
+  <div class="stage" id="calStage">
+    <div id="calCard" class="cal-card"><span>카드를 세로로 세워 올려 네 모서리를 맞춰주세요</span></div>
+    <div id="calCoin" class="cal-coin" hidden><span>100원</span></div>
+  </div>
+  <div class="bar">
+    <div class="ctl">
+      <button class="pm" id="calMinus" aria-label="작게">−</button>
+      <input type="range" id="calRange" min="2" max="9" step="0.005" value="6">
+      <button class="pm" id="calPlus" aria-label="크게">＋</button>
+    </div>
+    <p class="hint" id="calHint">신용카드(85.60 × 53.98mm)를 세로로 올려 가로·세로 테두리가 딱 맞게 슬라이더를 움직여 주세요.</p>
+    <button class="primary" id="calDone">보정 완료</button>
+  </div>
+</main>
+
+<!-- 2단계: 반지 측정 -->
+<main id="measure" class="screen" hidden>
+  <h1>반지를 화면에 올려주세요</h1>
+  <p class="lead">반지 <b>안쪽 테두리</b>에 원이 딱 맞게 조절해 보세요.</p>
+  <div class="stage ring-stage" id="stage">
+    <div id="circle" class="circle"><i class="h"></i><i class="v"></i></div>
+  </div>
+  <div class="result">
+    <div class="big"><span id="rsNo">-</span><small>호</small></div>
+    <div class="meta">
+      <div>안지름 <b id="rsD">-</b> mm</div>
+      <div>둘레 <b id="rsC">-</b> mm</div>
+      <div class="ref">US <b id="rsUS">-</b> · EU <b id="rsEU">-</b></div>
+    </div>
+  </div>
+  <div class="ctl">
+    <button class="pm" id="mMinus" aria-label="작게">−</button>
+    <input type="range" id="mRange" min="12.5" max="23" step="0.01" value="16.5">
+    <button class="pm" id="mPlus" aria-label="크게">＋</button>
+  </div>
+  <p class="hint">− ＋ 버튼은 0.1mm씩 움직여요. 아래 표에서 호수를 직접 눌러도 돼요.</p>
+  <div class="tablewrap">
+    <table id="tbl">
+      <thead><tr><th>호수</th><th>안지름(mm)</th><th>둘레(mm)</th><th>US</th><th>EU</th></tr></thead>
+      <tbody></tbody>
+    </table>
+  </div>
+  <p class="note">한국 표준(KS) 호수 기준이며 안지름은 호수당 약 0.33mm씩 커져요. 브랜드·제품 형태에 따라 ±0.5호 차이가 있을 수 있으니, 두 호수 사이이면 큰 호수를 권해 드려요. US·EU는 참고용이에요.</p>
+  <button class="ghost" id="recal">화면 크기 다시 보정</button>
+</main>
+
+<footer class="foot">LE CHARMING · 샤밍주얼리</footer>
+<script src="app.js"></script>
+</body>
+</html>
