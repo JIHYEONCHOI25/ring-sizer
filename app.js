@@ -7,6 +7,8 @@
   // KS(한국 표준) 호수: 1호 = 안지름 13.0mm, 호수당 1/3mm
   function dOf(n) { return 13 + (n - 1) / 3; }
   function noOf(d) { return 1 + (d - 13) * 3; }
+  // 샤밍주얼리 스토어 KS규격 표(공지 2019.12.10): 1호 44mm, 호수당 1mm (11호 54mm)
+  function finger(d) { return 44 + (d - 13) * 3; }
   function us(d) { return (d - 11.63) / 0.8128; }
   function f1(x) { return (Math.round(x * 10) / 10).toFixed(1); }
   function f2(x) { return (Math.round(x * 100) / 100).toFixed(2); }
@@ -56,7 +58,7 @@
   var rows = [];
   for (var n = 1; n <= 30; n++) {
     var dd = dOf(n), tr = document.createElement('tr');
-    tr.innerHTML = '<td>' + n + '호</td><td>' + f2(dd) + '</td><td>' + f1(dd * Math.PI) + '</td><td>' + f1(us(dd)) + '</td><td>' + Math.round(dd * Math.PI) + '</td>';
+    tr.innerHTML = '<td>' + n + '호</td><td>' + f2(dd) + '</td><td>' + f1(dd * Math.PI) + '</td><td>' + f1(finger(dd)) + '</td><td>' + f1(us(dd)) + '</td><td>' + Math.round(dd * Math.PI) + '</td>';
     (function (nn) { tr.onclick = function () { setD(dOf(nn)); }; })(n);
     tbody.appendChild(tr); rows.push(tr);
   }
@@ -69,6 +71,7 @@
     $('rsNo').textContent = diff < 0.15 ? r : (Math.round(n * 10) / 10);
     $('rsD').textContent = f2(d);
     $('rsC').textContent = f1(d * Math.PI);
+    $('rsF').textContent = f1(finger(d));
     $('rsUS').textContent = f1(us(d));
     $('rsEU').textContent = Math.round(d * Math.PI);
     rows.forEach(function (tr, i) { tr.classList.toggle('on', i + 1 === r && r >= 1 && r <= 30); });

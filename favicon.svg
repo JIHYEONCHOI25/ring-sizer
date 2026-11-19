@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" role="img" aria-label="LE CHARMING 반지 호수 측정">
+  <rect width="64" height="64" rx="15" fill="#faf7f2"/>
+  <rect x="1.2" y="1.2" width="61.6" height="61.6" rx="14" fill="none" stroke="#e6dfd2" stroke-width="1.4"/>
+  <circle cx="32" cy="38.5" r="15.2" fill="none" stroke="#b08d57" stroke-width="4"/>
+  <circle cx="32" cy="38.5" r="15.2" fill="none" stroke="#8f6f3e" stroke-width="1" opacity=".45"/>
+  <path d="M32 7.5 37.8 14.6H26.2Z" fill="#b08d57"/>
+  <path d="M32 7.5 34.9 14.6H29.1Z" fill="#e9cf9f"/>
+</svg>

@@ -6,6 +6,26 @@
 <meta name="referrer" content="no-referrer">
 <title>반지 호수 측정 · LE CHARMING</title>
 <meta name="description" content="가지고 있는 반지를 휴대폰 화면에 올려 내 반지 호수를 확인하세요.">
+<meta name="theme-color" content="#faf7f2">
+<link rel="icon" href="favicon.svg" type="image/svg+xml">
+
+<!-- 공유 미리보기 (카카오톡·인스타 DM·SNS) -->
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="LE CHARMING">
+<meta property="og:locale" content="ko_KR">
+<meta property="og:title" content="반지 호수 측정 · LE CHARMING (샤밍주얼리)">
+<meta property="og:description" content="가지고 있는 반지를 휴대폰 화면에 올려 10초 만에 내 반지 호수를 확인하세요.">
+<meta property="og:url" content="https://jihyeonchoi25.github.io/ring-sizer/">
+<meta property="og:image" content="https://jihyeonchoi25.github.io/ring-sizer/og-image.png">
+<meta property="og:image:type" content="image/png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="LE CHARMING 반지 호수 측정">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="반지 호수 측정 · LE CHARMING (샤밍주얼리)">
+<meta name="twitter:description" content="가지고 있는 반지를 휴대폰 화면에 올려 10초 만에 내 반지 호수를 확인하세요.">
+<meta name="twitter:image" content="https://jihyeonchoi25.github.io/ring-sizer/og-image.png">
+
 <link rel="stylesheet" href="style.css">
 </head>
 <body>
@@ -48,7 +68,8 @@
     <div class="big"><span id="rsNo">-</span><small>호</small></div>
     <div class="meta">
       <div>안지름 <b id="rsD">-</b> mm</div>
-      <div>둘레 <b id="rsC">-</b> mm</div>
+      <div>안쪽 둘레 <b id="rsC">-</b> mm</div>
+      <div>손가락 둘레 <b id="rsF">-</b> mm</div>
       <div class="ref">US <b id="rsUS">-</b> · EU <b id="rsEU">-</b></div>
     </div>
   </div>
@@ -60,11 +81,11 @@
   <p class="hint">− ＋ 버튼은 0.1mm씩 움직여요. 아래 표에서 호수를 직접 눌러도 돼요.</p>
   <div class="tablewrap">
     <table id="tbl">
-      <thead><tr><th>호수</th><th>안지름(mm)</th><th>둘레(mm)</th><th>US</th><th>EU</th></tr></thead>
+      <thead><tr><th>호수</th><th>안지름<br>(mm)</th><th>안쪽<br>둘레</th><th>손가락<br>둘레</th><th>US</th><th>EU</th></tr></thead>
       <tbody></tbody>
     </table>
   </div>
-  <p class="note">한국 표준(KS) 호수 기준이며 안지름은 호수당 약 0.33mm씩 커져요. 브랜드·제품 형태에 따라 ±0.5호 차이가 있을 수 있으니, 두 호수 사이이면 큰 호수를 권해 드려요. US·EU는 참고용이에요.</p>
+  <p class="note"><b>안쪽 둘레</b>는 반지 안쪽에서 잰 원주(안지름 × π)이고, <b>손가락 둘레</b>는 샤밍주얼리 스토어 KS규격 표(1호 44mm ~ 30호 73mm) 기준이에요. 두 값은 약 2.7mm 차이가 나요.<br>한국 표준(KS) 호수 기준이며 안지름은 호수당 약 0.33mm씩 커져요. 브랜드·제품 형태에 따라 ±0.5호 차이가 있을 수 있으니, 두 호수 사이이면 큰 호수를 권해 드려요. 폭이 넓은 반지는 0.5~1호 크게 주문하시길 권해요. US·EU는 참고용이에요.</p>
   <button class="ghost" id="recal">화면 크기 다시 보정</button>
 </main>
 
